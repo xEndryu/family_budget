@@ -1,15 +1,16 @@
 import json
-import os
 
 from fastapi import APIRouter, HTTPException, status
+
+from ...helpers.config import settings
 
 router = APIRouter()
 
 
 @router.get("/")
 def get_version():
-    version = os.environ.get("APP_VERSION")
-    app_name = os.environ.get("APP_NAME")
+    version = settings.APP_VERSION
+    app_name = settings.APP_NAME
 
     version_dict = {
         "product": app_name,

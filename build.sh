@@ -13,7 +13,7 @@ case $1 in
   docker-compose -f compose.cmd.yml up --build --exit-code-from=backend
   ;;
 "--check-lint"|"-c")
-  export DOCKER_COMMAND="flake8 --max-line-length=150 --exclude=*migrations*,*__init__*,*settings*,*venv*,*base.py"
+  export DOCKER_COMMAND="flake8 --max-line-length=150 --exclude=*__init__*,*venv*,*base.py,alembic"
   docker-compose -f compose.cmd.yml up --build --exit-code-from=backend
   ;;
 "--delete"|"-d")
