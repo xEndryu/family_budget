@@ -22,6 +22,7 @@ case $1 in
 "--alembic"|"-a")
   export DOCKER_COMMAND="alembic upgrade head"
   docker-compose -f compose.cmd.yml up --build --exit-code-from=backend
+  ;;
 *)
   echo " use ./build.sh -[r|b|t|c|d]"
   ;;
