@@ -21,6 +21,19 @@ Provides swagger at <localhost:8000/docs>
 
 ## How to run - Local Development environment
 
+\
+Please create `.env` file with following variables:
+
+```
+POSTGRES_USER: postgres username
+POSTGRES_PASSWORD: postgres password
+POSTGRES_SERVER: postgres hostname
+POSTGRES_PORT: postgres port number
+POSTGRES_DB: postgres database name
+SECRET_KEY: secret key for JWT auth
+```
+
+\
 All the deployment is done by using the `build.sh` script. Below you can find it's arguments:
 
 - -r | --run : run app
